@@ -163,6 +163,6 @@ footer nav a:hover{color:var(--sun)}
   .cform{max-width:none}
   .mapcell iframe{min-height:320px;height:320px}
   footer.site .wrap{grid-template-columns:1fr}
-  .qsrc{white-space:normal}
+  .qsrc,.mnote{white-space:normal}
   .tline li{padding-left:36px}
 }
