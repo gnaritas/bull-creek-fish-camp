@@ -1,0 +1,8 @@
+{
+  "name": "bull-creek-fish-camp",
+  "version": "1.0.0",
+  "description": "Bull Creek Fish Camp — seafood restaurant on the water, 3861 County Rd 2006 W, Bunnell FL 32110 (static site + node form relay)",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

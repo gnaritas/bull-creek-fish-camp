@@ -1,0 +1,168 @@
+/* Bull Creek Fish Camp — hand-rolled stylesheet · reopening January 2027 · Bunnell FL
+   Identity: cypress & dock timber — deep cypress green, creek teal, cedar rust, sun gold,
+   wave-line motifs. Layout mechanics shared with the lane family; visuals unique to this camp. */
+:root{
+  --cypress:#1d3128;
+  --cypress2:#274235;
+  --creek:#2f6d6d;
+  --creekd:#235252;
+  --cedar:#b5763a;
+  --cedard:#96602c;
+  --sun:#d8b25e;
+  --sand:#f5f1e4;
+  --sand2:#eae3cf;
+  --ink:#22322a;
+  --muted:#66715f;
+  --line:#d8d1ba;
+  --card:#fdfbf1;
+  --serif:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+a{color:var(--creek)}
+a:hover{color:var(--creekd)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+img,svg{max-width:100%}
+address{font-style:normal}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--cypress);color:#fff;padding:10px 16px;z-index:10;border-radius:0 0 8px 0;text-decoration:none}
+.skip:focus{left:0}
+.band{height:5px;background:linear-gradient(90deg,var(--creek) 0 40%,var(--sun) 40% 62%,var(--cedar) 62% 100%)}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+header.top{background:var(--cypress);color:#e9efdc;padding:16px 0}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none}
+.mark{width:44px;height:44px;color:var(--sun);flex:0 0 44px}
+.word{display:flex;flex-direction:column;font:600 20px/1.15 var(--serif);letter-spacing:.01em}
+.word small{font:600 10.5px/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#a9b493;margin-top:4px}
+nav.main ul{display:flex;flex-wrap:wrap;gap:16px 22px;list-style:none;align-items:center}
+nav.main a{color:#dbe4c8;text-decoration:none;font:600 13.5px/1 var(--sans);letter-spacing:.07em;text-transform:uppercase}
+nav.main a:hover{color:var(--sun)}
+nav.main a.btn{color:#fff}
+
+.btn{display:inline-block;background:var(--cedar);color:#fff;padding:13px 24px;border-radius:8px;border:1.5px solid transparent;font:600 14px/1.2 var(--sans);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--cedard);color:#fff}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+.btn.ghost:hover{background:rgba(255,255,255,.09)}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:22px}
+
+.hero{background:radial-gradient(900px 500px at 85% -12%,rgba(47,109,109,.30),transparent 60%),radial-gradient(700px 420px at -8% 112%,rgba(181,118,58,.22),transparent 55%),var(--cypress);color:#e9efdc;padding:64px 0 68px}
+.hero .label{color:var(--sun)}
+.hero.slim{padding:50px 0 54px}
+.label{display:block;font:700 12px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--cedar);margin-bottom:14px}
+h1{font-size:clamp(38px,6vw,70px);margin:0 0 18px}
+.hero .sub{max-width:680px;font-size:clamp(17px,2vw,20px);color:rgba(233,239,220,.86)}
+.hero .sub a{color:var(--sun)}
+.meander{display:block;color:var(--sun);margin:26px 0 0}
+
+.block{padding:58px 0}
+.block.alt{background:var(--sand2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.block h2{font-size:clamp(26px,3.6vw,40px);margin-bottom:14px}
+.lede{max-width:760px;font-size:18px;color:#41513f}
+.lede.center,.lede[style*="center"]{max-width:700px}
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:28px}
+.chip,.panel,.msection,.qa{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 26px}
+.chip h3,.panel h3,.msection h3,.qa h3{font-size:22px;margin-bottom:10px;color:var(--cypress)}
+.chip p,.panel p{font-size:16px;color:#41513f}
+.chip p+p,.panel p+p{margin-top:12px}
+main .block>.wrap>p+p,main .block>.wrap>blockquote+p,main .block>.wrap>p+blockquote,main .block>.wrap>ul+p,main .block>.wrap>form+p{margin-top:14px}
+.chip a,.msection a,.qa a,.panel a{font-weight:600;text-decoration:none}
+.chip p:last-child a{white-space:nowrap}
+
+.quote{font:italic 500 clamp(21px,2.8vw,30px)/1.45 var(--serif);color:var(--cypress);max-width:820px;margin:34px 0 8px;padding-left:22px;border-left:4px solid var(--sun)}
+.qby{font:600 13px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.qsrc{font:600 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;text-align:center}
+.fact h3{color:var(--cedar);margin-bottom:8px}
+.fact p{font-size:16px;color:#41513f}
+
+.menu-board{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:28px}
+.msection h3{color:var(--cedar)}
+.msec-list{list-style:none;display:grid;gap:9px;margin:8px 0 14px}
+.msec-list li{border-bottom:1px dashed #c8c2aa;padding-bottom:9px;font-size:16px;color:#41513f}
+.msec-list li:last-child{border-bottom:0;padding-bottom:0}
+.msec-list li strong{font-family:var(--serif);font-weight:600;color:var(--cypress);font-size:17px}
+.mnote{font-size:13px;color:var(--muted);white-space:nowrap}
+
+.panel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:26px}
+.panel .tag{display:block;font:700 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--creek);margin-bottom:8px}
+
+.tline{list-style:none;display:grid;gap:30px;margin:30px 0 10px}
+.tline li{position:relative;padding-left:42px}
+.tline li::before{content:"";position:absolute;left:10px;top:34px;bottom:-30px;width:2px;background:#ccc5ac}
+.tline li:last-child::before{display:none}
+.tline li::after{content:"";position:absolute;left:4px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--cedar);box-shadow:0 0 0 3px var(--sand)}
+.block.alt .tline li::after{box-shadow:0 0 0 3px var(--sand2)}
+.year{font:700 13px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--cedar);margin-bottom:6px}
+.tline h3{margin-bottom:8px}
+
+.faq-list{display:grid;gap:18px;margin-top:26px}
+.qa p{font-size:16px;color:#41513f}
+.qa p+p{margin-top:10px}
+
+.mapcell{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:24px}
+.mapcell iframe{display:block;width:100%;min-height:400px;height:400px;border:0}
+.mapnote{font-size:14px;color:var(--muted);margin-top:12px}
+.block.alt .mapnote{text-align:center}
+
+.callband{background:linear-gradient(100deg,var(--creek),var(--creekd));color:#f0efe0;padding:54px 0}
+.callband .wrap{display:flex;gap:26px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.callband h2{font-size:clamp(24px,3vw,34px);color:#fff}
+.callband p{max-width:560px;color:#e4e2cd;margin-top:8px}
+.callband p a{color:#f6f2dd}
+.callband .cta-row{margin-top:0;flex:0 0 auto}
+.callband .btn{background:var(--sand);color:var(--cypress)}
+.callband .btn:hover{background:#fff;color:var(--cypress)}
+.callband .btn.ghost{background:transparent;border-color:rgba(240,239,224,.75);color:#f0efe0}
+.callband .btn.ghost:hover{background:rgba(240,239,224,.12)}
+
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:36px;align-items:start}
+.contact-side{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 28px}
+.contact-side h3{margin:14px 0 6px;font-size:20px}
+.contact-side h3:first-of-type{margin-top:0}
+.contact-side address,.contact-side p{font-size:16px;color:#41513f}
+.cform{display:grid;gap:18px;max-width:560px;margin-top:22px}
+.cform label{display:grid;gap:7px;font:600 13px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--cypress)}
+.cform input,.cform textarea{font:16px/1.5 var(--sans);color:var(--ink);background:var(--card);border:1.5px solid #bfb99e;border-radius:8px;padding:12px 14px;min-width:0;width:100%}
+.cform input:focus,.cform textarea:focus{outline:3px solid var(--sun);outline-offset:1px;border-color:var(--creek)}
+.cform .note{font-size:14px;color:var(--muted);letter-spacing:0;text-transform:none}
+.cform button{font:600 14px/1.2 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:14px 28px;border:0;border-radius:8px;background:var(--cedar);color:#fff;cursor:pointer}
+.cform button:hover{background:var(--cedard)}
+
+footer.site{background:var(--cypress);color:#c2cba7;margin-top:0;padding:48px 0 40px}
+footer.site .wrap{display:grid;grid-template-columns:minmax(240px,1fr) minmax(240px,1.2fr);gap:28px}
+.fbrand{font:600 22px/1.2 var(--serif);color:#e9efdc;margin-bottom:10px}
+footer.site address{line-height:1.9;font-size:15px}
+footer.site a{color:#dfc98a;text-decoration:none}
+footer.site a:hover{text-decoration:underline;color:#ecd8a4}
+footer nav ul{display:flex;flex-wrap:wrap;gap:10px 24px;list-style:none;align-content:flex-start}
+footer nav a{color:#c2cba7;font:600 12.5px var(--sans);letter-spacing:.09em;text-transform:uppercase}
+footer nav a:hover{color:var(--sun)}
+.footline{grid-column:1/-1;font-size:13px;color:#8f9a7e;margin-top:10px;border-top:1px solid #35473b;padding-top:18px}
+
+@media (max-width:860px){
+  .contact-grid{grid-template-columns:1fr}
+  .callband .wrap{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:700px){
+  header.top .wrap{align-items:flex-start;flex-direction:column;gap:14px}
+  nav.main ul{gap:10px 18px}
+  .hero{padding:44px 0 48px}
+  .hero.slim{padding:38px 0 42px}
+  .block{padding:44px 0}
+  .chips,.panel-grid,.menu-board,.facts{grid-template-columns:1fr}
+  .meander{width:96px;height:13px}
+  .cform{max-width:none}
+  .mapcell iframe{min-height:320px;height:320px}
+  footer.site .wrap{grid-template-columns:1fr}
+  .qsrc{white-space:normal}
+  .tline li{padding-left:36px}
+}
